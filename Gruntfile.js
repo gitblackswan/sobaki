@@ -7,9 +7,9 @@ module.exports = function(grunt) {
     var adaptive = true;
 
 
-    var ft_target = 'src/desktop/';
-    var ft_folder = 'webdone.info/www/standarts/';
-    var ft_host = 'webdone.ftp.ukraine.com.ua';
+    var ft_target = 'dist/';
+    var ft_folder = 'sob/';
+    var ft_host = '31.170.165.196';
     
    
     var dist_valid_array = ['dist/index.php'];  
@@ -481,7 +481,7 @@ module.exports = function(grunt) {
             options: {
                 force: true
             },
-
+            dist: ['dist/**/*'],
             desktop: ['src/desktop/index_fc.html','src/desktop/css/full.css', 'src/desktop/css/bp', 'src/desktop/css/ap', 'src/desktop/js/bp'],
             tablet: ['src/tablet/index_fc.html','src/tablet/css/full.css', 'src/tablet/css/bp', 'src/tablet/css/ap', 'src/tablet/js/bp'],
             mobile: ['src/mobile/index_fc.html','src/mobile/css/full.css', 'src/mobile/css/bp', 'src/mobile/css/ap', 'src/mobile/js/bp']
@@ -1454,23 +1454,23 @@ if(!mobile&&!tablet&&adaptive){
 
 var start_command = ['start-desktop'];
 
-var fin_array = ['start-desktop','fin-desktop'];
+var fin_array = ['clean:dist','start-desktop','fin-desktop'];
 
-var fin_command = ['fin-desktop'];
+//var fin_command = ['fin-desktop'];
 
 var validate_command = ['validation'];
 
 var check_command = ['check-desktop'];
 
 if(tablet) {
-    fin_command.push('fin-tablet');
+    //fin_command.push('fin-tablet');
     start_command.push('start-tablet');
     fin_array.push('start-tablet').push('fin-tablet');
     check_command.push('check-tablet');
 }
 
 if(mobile) {
-    fin_command.push('fin-mobile');
+    //fin_command.push('fin-mobile');
     start_command.push('start-mobile');
     fin_array.push('start-mobile').push('fin-mobile');
     check_command.push('check-mobile');
