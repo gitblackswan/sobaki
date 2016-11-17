@@ -1363,7 +1363,7 @@ if(!mobile&&!tablet&&adaptive){
         'dataUri:desktop', //перевод картинок до 2048 байт в base64uri в dist/css/head.min.css, dist/css/full.min.css
         'string-replace:desktop_afterbase', //замена путей ../img->img непереведдных картинок в dist/css/head.min.css
         'htmlmin:desktop', //сжатие dist/index.php и dist/ajax/map.html
-        //'unusedimages:desktop', //Удаление неиспользованных картинок из dist/img/
+        'unusedimages:desktop', //Удаление неиспользованных картинок из dist/img/
         'copy:track', //Копирование src/track/ в dist/track/
         'string-replace:desktop_br_space'
     ]);
@@ -1398,7 +1398,7 @@ if(!mobile&&!tablet&&adaptive){
         'dataUri:tablet',
         'string-replace:tablet_afterbase', 
         'htmlmin:tablet',
-        //'unusedimages:tablet',
+        'unusedimages:tablet',
         'string-replace:tablet_br_space'
     ]);
 
@@ -1432,7 +1432,7 @@ if(!mobile&&!tablet&&adaptive){
         'dataUri:mobile',
         'string-replace:mobile_afterbase', 
         'htmlmin:mobile',
-        //'unusedimages:mobile',
+        'unusedimages:mobile',
         'string-replace:mobile_br_space'
     ]);
 
